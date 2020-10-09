@@ -11,12 +11,14 @@ For more information about adversarial machine learning, see the following links
 
 The neural networks used in the code are pretrained models available in the torchvision package (https://pytorch.org/docs/stable/torchvision/models.html).
 
+TODO images... (license, etc.)
+
 ## Setup instructions
 ### Cloning the repository
 
-Run ... the following
+To clone the repository using HTTPS, type the following command into a terminal:
 ```
-git clone ...
+git clone https://github.com/a-rimpapa/img-classification-adversarial-examples.git
 ```
 
 ... Alternative links for cloning or downloading the repository are at the top right of the page.
@@ -25,3 +27,9 @@ git clone ...
 
 * pip: Run `pip ... requirements.txt`
 * conda: Run `conda ... environment.yml`
+
+### Running the code
+
+To run `main.ipynb`, start a Jupyter notebook server on your computer and open the notebook. This can be done for example by running `jupyter notebook` in the command line. ... (TODO other ways), or by using an IDE which automatically starts the notebook server.
+
+Alternatively, 
