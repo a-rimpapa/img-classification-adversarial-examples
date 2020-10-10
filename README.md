@@ -1,6 +1,8 @@
 # img-classification-adversarial-examples
 A repository containing examples of adversarial machine learning for image classification in PyTorch.
 
+TODO maybe change file main.ipynb to examples.ipynb and utils.py to main.py (only show examples in Jupyter notebook and have entire code in .py script file)
+
 Adversarial machine learning is .... The goal is to construct an image which a human can classify correctly, but which a neural network classifies wrongly.
 
 An adversarial example is ...
