@@ -1,3 +1,4 @@
+import torch.nn as nn
 import torchvision.transforms as transforms
 import PIL
 
@@ -12,8 +13,7 @@ def file_to_tensor(filepath):
         filepath: A string containing the path to the JPEG image file.
 
     Returns:
-        A torch.Tensor of shape 3 x 224 x 224 containing the resized image.
-
+        A torch.Tensor (shape 3 x 224 x 224) containing the resized image.
     """
     img_raw = PIL.Image.open(filepath)
     width, height = img_raw.size
@@ -31,3 +31,43 @@ def file_to_tensor(filepath):
     img = preprocess_transform(img_raw)
     return img
 
+def transform_to_input(img):
+    """Transforms a tensor to be able to pass it as input to a pretrained model.
+    
+    Normalizes the input image tensor so that the resulting tensor can be passed 
+    as input to one of the pretrained models in torchvision.models, as described
+    here: https://pytorch.org/docs/stable/torchvision/models.html. An additional
+    dimension of size 1 is also inserted at position 0, to ensure that the tensor 
+    has the correct shape.
+
+    Args:
+        img: A torch.Tensor (shape 3 x 224 x 224) containing a 224 x 224 image.
+
+    Returns:
+        A torch.Tensor (shape 1 x 3 x 224 x 224) containing the normalized image.
+    """
+    normalize_transform = transforms.Normalize(mean=[0.485, 0.456, 0.406],
+                                               std=[0.229, 0.224, 0.225])
+    
+    img_normalized = normalize_transform(img)
+    img_normalized = img_normalized.unsqueeze(0)
+    return img_normalized
+
+# TODO rename
+class Net(nn.Module):
+    # TODO class docstring
+    
+    # TODO argument for parameter initialization
+    def __init__(self, pretrained_model):
+        super(Net, self).__init__()
+        
+    # TODO
+    # TODO can forward take no arguments? probably not,
+    # then just disregard argument x and have original image as instance variable
+    def forward(self, x):
+        return x
+        
+
+
+# TODO: somewhere (maybe in predict method?), check whether tensor is proper
+# shape to be input of model (3, 224, 224)
