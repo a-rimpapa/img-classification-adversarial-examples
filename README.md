@@ -18,12 +18,12 @@ The neural networks used in the code are pretrained models available in the `tor
 The original images were taken from [Unsplash](https://unsplash.com/).
 
 Original images:
-- [`anne-nygard-CYBgMHYgES4-unsplash.jpg` (1920 x 1281)](https://unsplash.com/photos/CYBgMHYgES4), Photo by [Anne Nygård](https://unsplash.com/@polarmermaid) 
+- `anne-nygard-CYBgMHYgES4-unsplash.jpg` (1920 x 1281), Photo by [Anne Nygård](https://unsplash.com/@polarmermaid), taken from https://unsplash.com/photos/CYBgMHYgES4
 
 The images used in the code were derived by me from the original images.
 
 Images used in code:
-- `golden_retriever.jpg` was created by cropping `anne-nygard-CYBgMHYgES4-unsplash.jpg` to a size of 1280 x 1280.
+- `golden_retriever.jpg` (1280 x 1280) was created by cropping `anne-nygard-CYBgMHYgES4-unsplash.jpg`.
 
 ## Setup instructions
 ### Cloning the repository
