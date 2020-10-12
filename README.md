@@ -13,17 +13,15 @@ For more information about adversarial machine learning, see the following links
 
 The neural networks used in the code are pretrained models available in the torchvision package (https://pytorch.org/docs/stable/torchvision/models.html).
 
-TODO images... (license, etc.)
-
 ## Image Sources
 
 The original images were taken from [Unsplash](https://unsplash.com/).
 
 Original images:
-- anne-nygard-CYBgMHYgES4-unsplash.jpg by Anne Nygård (https://unsplash.com/photos/CYBgMHYgES4)
+- _anne-nygard-CYBgMHYgES4-unsplash.jpg_ (https://unsplash.com/photos/CYBgMHYgES4), Photo by [Anne Nygård](https://unsplash.com/@polarmermaid) 
 
 Images used in code:
-- golden_retriever.jpg was created by cropping anne-nygard-CYBgMHYgES4-unsplash.jpg to a size of 1280 x 1280.
+- _golden_retriever.jpg_ was created by cropping _anne-nygard-CYBgMHYgES4-unsplash.jpg_ to a size of 1280 x 1280.
 
 ## Setup instructions
 ### Cloning the repository
