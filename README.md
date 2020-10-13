@@ -1,11 +1,9 @@
 # img-classification-adversarial-examples
 A repository containing examples of adversarial machine learning for image classification in PyTorch.
 
-TODO maybe change file main.ipynb to examples.ipynb and utils.py to main.py (only show examples in Jupyter notebook and have entire code in .py script file)
+TODO maybe rename utils.py to main.py
 
-Adversarial machine learning is .... The goal is to construct an image which a human can classify correctly, but which a neural network classifies wrongly.
-
-An adversarial example is ...
+Adversarial machine learning is .... (TODO general definition) The goal is to construct an image which a human can classify correctly, but which a neural network classifies wrongly, sometimes called an adversarial example. Here, adversarial examples are constructed by taking an image A and adding a (small) noise image N to it to produce a resulting image A', although there are many more ways to construct adversarial examples. The noise image is a variable parameter, and the parameters of the network remain unchanged throughout the training process. The objective function which is to be minimised is taken to be the loss between the network's prediction, given A' as input, and a specified target. This aims to make the neural network misclassify the image A' as the class associated with this specific target, after enough training epochs.
 
 For more information about adversarial machine learning, see the following links:
 - https://en.wikipedia.org/wiki/Adversarial_machine_learning
