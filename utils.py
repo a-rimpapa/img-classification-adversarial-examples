@@ -67,14 +67,21 @@ class Net(nn.Module):
     # TODO class docstring
     
     # TODO argument for parameter initialization
-    def __init__(self, pretrained_model):
+    def __init__(self, pretrained_model, original_img, noise_img):
         super(Net, self).__init__()
+        self.original_img = original_img
+        self.noise_img = noise_img
+        for param in self.pretrained_model.parameters():
+            param.requires_grad = False
         
     # TODO
     # TODO can forward take no arguments? probably not,
     # then just disregard argument x and have original image as instance variable
     def forward(self, x):
-        return x
+        input_img = self.original_img + self.noise_img
+        model_input = transform_to_input(input_img)
+        model_output = self.pretrained_model(model_input)
+        return model_output
         
 
 
