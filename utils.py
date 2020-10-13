@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 import torch.nn as nn
 import torchvision.transforms as transforms
 import PIL
@@ -52,6 +53,14 @@ def transform_to_input(img):
     img_normalized = normalize_transform(img)
     img_normalized = img_normalized.unsqueeze(0)
     return img_normalized
+
+# TODO comments, docstring
+def visualize(img_tensor):
+    img_numpy = img_tensor.numpy().transpose((1, 2, 0))
+    
+    fig, ax = plt.subplots()
+    ax.imshow(img_numpy)
+    plt.show()
 
 # TODO rename
 class Net(nn.Module):
