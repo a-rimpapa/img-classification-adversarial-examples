@@ -26,12 +26,12 @@ Images used in code:
 ## Setup instructions
 ### Cloning the repository
 
-To clone the repository using HTTPS, type the following command into a terminal:
+To clone the repository using HTTPS, execute the following command:
 ```
 git clone https://github.com/a-rimpapa/img-classification-adversarial-examples.git
 ```
 
-... Alternative links for cloning or downloading the repository are at the top right of the page.
+Alternative links for cloning or downloading the repository are at the top right of the page.
 
 ### Installing packages
 
@@ -40,6 +40,6 @@ git clone https://github.com/a-rimpapa/img-classification-adversarial-examples.g
 
 ### Running the code
 
-To run `main.ipynb`, start a Jupyter notebook server on your computer and open the notebook. This can be done for example by running `jupyter notebook` in the command line. ... (TODO other ways), or by using an IDE which automatically starts the notebook server.
+To run `examples.ipynb`, start a Jupyter notebook server on your computer and open the notebook. This can be done for example by running `jupyter notebook` in the command line. ... (TODO other ways), or by using an IDE which automatically starts the notebook server.
 
 Alternatively, 
