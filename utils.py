@@ -54,8 +54,14 @@ def transform_to_input(img):
     img_normalized = img_normalized.unsqueeze(0)
     return img_normalized
 
-# TODO comments, docstring
 def visualize(img_tensor):
+    """Visualizes an image.
+    
+    Takes in an image tensor as input and plots the image in a matplotlib figure.
+    
+    Args:
+        img_tensor: A torch.Tensor (shape 3 x H x W) containing an image.
+    """
     img_numpy = img_tensor.numpy().transpose((1, 2, 0))
     
     fig, ax = plt.subplots()
