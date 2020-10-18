@@ -70,13 +70,24 @@ def visualize(img_tensor):
 
 # TODO rename
 class Net(nn.Module):
-    # TODO class docstring
+    """Model which is used to construct an adversarial examples (TODO).
+    
+    [TODO]
+    
+    Attributes:
+        original_img: The original image.
+        noise_img: The noise which is added to the original image.
+        pretrained_model: The pretrained model which is used as a classifier.
+    """
     
     # TODO argument for parameter initialization
     def __init__(self, pretrained_model, original_img, noise_img):
+        """TODO."""
         super(Net, self).__init__()
         self.original_img = original_img
         self.noise_img = noise_img
+        self.pretrained_model = pretrained_model
+        
         for param in self.pretrained_model.parameters():
             param.requires_grad = False
         
@@ -84,6 +95,7 @@ class Net(nn.Module):
     # TODO can forward take no arguments? probably not,
     # then just disregard argument x and have original image as instance variable
     def forward(self, x):
+        """TODO."""
         input_img = self.original_img + self.noise_img
         model_input = transform_to_input(input_img)
         model_output = self.pretrained_model(model_input)
