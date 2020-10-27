@@ -82,7 +82,14 @@ class Net(nn.Module):
     
     # TODO argument for parameter initialization
     def __init__(self, pretrained_model, original_img, noise_img):
-        """TODO."""
+        """Initializes the model.
+
+        Args:
+            pretrained_model: A pretrained model which is used to make predictions.
+            original_img: A torch.Tensor (shape 3 x 224 x 224) containing an image.
+            noise_img: A torch.Tensor (shape 3 x 224 x 224) containing the initial value
+            for the noise image.
+        """
         super(Net, self).__init__()
         self.original_img = original_img
         self.noise_img = noise_img
@@ -91,11 +98,18 @@ class Net(nn.Module):
         for param in self.pretrained_model.parameters():
             param.requires_grad = False
         
-    # TODO
-    # TODO can forward take no arguments? probably not,
     # then just disregard argument x and have original image as instance variable
     def forward(self, x):
-        """TODO."""
+        """Performs forward propagation.
+        
+
+        Args:
+            x: The value of this argument is not used.
+
+        Returns:
+            model_output (TYPE): DESCRIPTION.
+
+        """
         input_img = self.original_img + self.noise_img
         model_input = transform_to_input(input_img)
         model_output = self.pretrained_model(model_input)
